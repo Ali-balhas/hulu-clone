@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@import 'tailwind-scrollbar-hide/v4';
+
+
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #0a0a0a;
+    @apply bg-[#06202A] text-red-300;
+  }
+}
+
+body {
+   background-color: #06202A;
+  color: #d1d5db; /*This is the hex for Tailwind’s gray-300*/
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  @media (min-width: 2000px) {
+    .\33xl\:flex {
+      display: flex;
+    }
+
+    .\33xl\:flex-wrap {
+      flex-wrap: wrap;
+    }
+
+    .\33xl\:justify-center {
+      justify-content: center;
+    }
+
+   
+  }
+}
